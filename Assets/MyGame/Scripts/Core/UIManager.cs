@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-[AddComponentMenu("DangSon/UIManager")]
+
 public class UIManager : MonoBehaviour
 {
     public TextMeshProUGUI textCoin;
@@ -12,6 +12,7 @@ public class UIManager : MonoBehaviour
     void Start()
     {
         GameManager.Instance.coinEventUpdate.AddListener(AddUiCoin);
+        textCoin.text = DataManager.DataCoin.ToString();
     }
 
     private void AddUiCoin(int coin)
