@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class EnemyFollowAI : MonoBehaviour
@@ -8,24 +10,31 @@ public class EnemyFollowAI : MonoBehaviour
 
 
     public float speed = 5f;
+    public float bulletSpeed = 7f;
     public float lineOfSite;
     public float shootingRange;
-    public GameObject bullet;
+    public Rigidbody2D bullet;
     public GameObject bulletParent;
     public float fireRate = 1f;
+    public float jumpForce = 300f;
 
 
     private float nextFireTime;
     private Transform player;
     private bool facingLeft = false;
     private Transform enemy;
-    private EnemyDeflect EnemyDeflect;
+    private EnemyDeflect enemyDeflect;
+    private Rigidbody2D rb;
+    private Rigidbody2D bulletRB;
+    private Collider2D coll;
 
 
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        rb = GetComponent<Rigidbody2D>();
+        coll = GetComponent<Collider2D>();
         
     }
 
@@ -39,8 +48,7 @@ public class EnemyFollowAI : MonoBehaviour
 
         } else if (distanceFromPlayer <  shootingRange && nextFireTime < Time.time)
         {
-            Instantiate(bullet, bulletParent.transform.position, Quaternion.identity);
-            nextFireTime = Time.time + fireRate;
+            Shoot();
         }
 
 
@@ -52,8 +60,28 @@ public class EnemyFollowAI : MonoBehaviour
 
     private void Shoot()
     {
-        
+        bulletRB = Instantiate(bullet, transform.position, transform.rotation);
+
+        bulletRB.velocity = bulletRB.transform.right * bulletSpeed;
+
+        enemyDeflect = bulletRB.gameObject.GetComponent<EnemyDeflect>();
+
+        enemyDeflect.EnemyColl = coll;
+
+        nextFireTime = Time.time + fireRate;
     }
+
+    private void OnCollisionEnter2D(UnityEngine.Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            rb.AddForce(new Vector2(0f, jumpForce));
+            Debug.Log("player near");
+
+        }
+
+    }
+
 
 
     void FlipTowardPlayer()

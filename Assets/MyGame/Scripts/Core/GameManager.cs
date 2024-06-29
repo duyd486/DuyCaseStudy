@@ -5,6 +5,7 @@ using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
+    public GameObject BossBlock;
     public GameObject gameOverUI;
 
     public static GameManager Instance
@@ -39,6 +40,7 @@ public class GameManager : MonoBehaviour
     {
         this.coin = DataManager.DataCoin;
         coinEvent.AddListener(AddCoin);
+        BossBlock.SetActive(false);
     }
     public void AddCoin(int coin)
     {

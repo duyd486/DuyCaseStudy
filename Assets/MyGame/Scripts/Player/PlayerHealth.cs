@@ -9,14 +9,25 @@ public class PlayerHealth : MonoBehaviour, ItakeDame
     public HealthUI healthUI;
     public Animator animator;
     public GameManager gameManager;
+    public GameObject enemies;
+    public GameObject BossBlock;
+    public GameObject bossBar;
+    public GameObject loveGhost;
 
     private float currentHealth = 0;
-    private bool isDead;
+    public bool isDead;
+
+
+
 
 
     // Start is called before the first frame update
     void Start()
     {
+        isDead = false;
+        loveGhost.SetActive(true);
+        bossBar.SetActive(false);
+        BossBlock.SetActive(false);
         Time.timeScale = 1;
         currentHealth = maxHealth;
         healthUI.SetMaxHeart(maxHealth);
@@ -24,14 +35,7 @@ public class PlayerHealth : MonoBehaviour, ItakeDame
 
 
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        //EnemyPatrolAI enemy = collision.GetComponent<EnemyPatrolAI>();
-        if (collision.gameObject.tag== "Enemy")
-        {
-            Damage(1f);
-        }
-    }
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -50,20 +54,29 @@ public class PlayerHealth : MonoBehaviour, ItakeDame
         healthUI.UpdateHearts(currentHealth);
         Debug.Log("Player hit");
 
+
         if (currentHealth <= 0 && !isDead)
         {
+            
+            animator.SetBool("IsDead", true);
             isDead = true;
-            Time.timeScale = 0;
-            //Die();
-            gameManager.gameOver();
+            StartCoroutine(GameOver());
         }
     }
+
+    private IEnumerator GameOver()
+    {
+        yield return new WaitForSeconds(1.2f);
+        Time.timeScale = 0f;
+        gameManager.gameOver();
+    }
+
 
 
 
     /*void Die()
     {
-        //animator.SetBool("IsDead", true);
+        //
         Debug.Log("Die");
         GetComponent<Collider2D>().enabled = false;
         this.enabled = false;

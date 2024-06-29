@@ -1,0 +1,27 @@
+Converting script [1 / 4]	[\LandingScripts.cs]
+	Fragments : 1
+		[ 0] : Line:   15	InputMethod   GetButtonDown       	("Jump")
+
+Converting script [2 / 4]	[\PlayerMovement.cs]
+	Fragments : 2
+		[ 0] : Line:   22	InputMethod   GetAxisRaw          	("Horizontal")
+		[ 1] : Line:   23	InputMethod   GetButtonDown       	("Jump")
+
+Converting script [3 / 4]	[\MyGame\Scripts\Player\PlayerAttack.cs]
+	Fragments : 1
+		[ 0] : Line:   18	InputMethod   GetKeyDown          	(KeyCode.J)
+
+Converting script [4 / 4]	[\MyGame\Scripts\Player\PlayerController.cs]
+	Fragments : 2
+		[ 0] : Line:   24	InputMethod   GetAxisRaw          	("Horizontal")
+		[ 1] : Line:   25	InputMethod   GetButtonDown       	("Jump")
+
+
+4 scripts modified!
+Overwriting actual scripts...
+	[0 / 4] from  [E:/Learn/Unity/DuyCaseStudy/CF2-Data/Script-Backups/2024-06-14-14-34\Assets-After/\LandingScripts.cs] to [E:/Learn/Unity/DuyCaseStudy/Assets/\LandingScripts.cs]
+	[1 / 4] from  [E:/Learn/Unity/DuyCaseStudy/CF2-Data/Script-Backups/2024-06-14-14-34\Assets-After/\PlayerMovement.cs] to [E:/Learn/Unity/DuyCaseStudy/Assets/\PlayerMovement.cs]
+	[2 / 4] from  [E:/Learn/Unity/DuyCaseStudy/CF2-Data/Script-Backups/2024-06-14-14-34\Assets-After/\MyGame\Scripts\Player\PlayerAttack.cs] to [E:/Learn/Unity/DuyCaseStudy/Assets/\MyGame\Scripts\Player\PlayerAttack.cs]
+	[3 / 4] from  [E:/Learn/Unity/DuyCaseStudy/CF2-Data/Script-Backups/2024-06-14-14-34\Assets-After/\MyGame\Scripts\Player\PlayerController.cs] to [E:/Learn/Unity/DuyCaseStudy/Assets/\MyGame\Scripts\Player\PlayerController.cs]
+
+Overwriting COMPLETED!

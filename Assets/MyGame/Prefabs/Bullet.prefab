@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 737754622384707918}
   - component: {fileID: 5687907423358308015}
   - component: {fileID: 1077519787764521200}
-  - component: {fileID: 1042790085278788184}
   - component: {fileID: 7996462803914251962}
   - component: {fileID: 6754722851212967136}
   m_Layer: 6
@@ -115,20 +114,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &1042790085278788184
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 764012326002603991}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af9ba0857da01484d91a68f9fc7fe384, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
-  timeDestroy: 4
 --- !u!114 &7996462803914251962
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,6 +127,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
+  speedCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.087497965
+      value: 0.23562402
+      inSlope: 0.83767045
+      outSlope: 0.83767045
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0.83767045
+      outSlope: 0.83767045
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  <ReturnSpeed>k__BackingField: 5
 --- !u!61 &6754722851212967136
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -174,7 +184,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.15690714, y: -0.32965058}
+  m_Offset: {x: -0.06466156, y: -0.32965058}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -185,5 +195,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.9256473, y: 1.6260813}
+  m_Size: {x: 3.5252442, y: 1.6260813}
   m_EdgeRadius: 0

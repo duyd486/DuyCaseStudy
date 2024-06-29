@@ -7,18 +7,19 @@ TagManager:
   - Enemy
   - Coin
   - Bullet
+  - BodyDamage
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Background
   - Water
   - UI
   - Bullet
   - Enemy
   - Player
   - Ground
-  - 
+  - Boss
   - 
   - 
   - 

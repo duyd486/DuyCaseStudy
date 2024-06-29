@@ -74,9 +74,9 @@ GameObject:
   - component: {fileID: 4921330890767175397}
   - component: {fileID: 6597227713096832036}
   - component: {fileID: 7004722709793164884}
+  - component: {fileID: 3144774579064874072}
   - component: {fileID: 616296776699784550}
   - component: {fileID: 8981269972203157338}
-  - component: {fileID: 1283877610411303715}
   - component: {fileID: 355580834616706754}
   - component: {fileID: 68138965769458305}
   m_Layer: 7
@@ -200,6 +200,51 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.800414, y: 4.978671}
   m_EdgeRadius: 0
+--- !u!61 &3144774579064874072
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6646515333653192524}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.021301031, y: 0.27689552}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 10.24, y: 10.24}
+    newSize: {x: 10.24, y: 10.24}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 8.011116, y: 4.4038935}
+  m_EdgeRadius: 0
 --- !u!114 &616296776699784550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -236,18 +281,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1283877610411303715
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6646515333653192524}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa40f77ada335934b9e57ee231834725, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!50 &355580834616706754
 Rigidbody2D:
   serializedVersion: 4
@@ -289,11 +322,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   idelMoveDirection: {x: 0, y: 0}
   speed: 4
+  bulletSpeed: 8
   lineOfSite: 10
-  shootingRange: 5
-  bullet: {fileID: 764012326002603991, guid: 65dadfc2a94f4214e9b7540797e8b134, type: 3}
+  shootingRange: 6.5
+  bullet: {fileID: 1077519787764521200, guid: 65dadfc2a94f4214e9b7540797e8b134, type: 3}
   bulletParent: {fileID: 6843398988757712682}
-  fireRate: 4
+  fireRate: 2
+  jumpForce: 450
 --- !u!1 &6843398988757712682
 GameObject:
   m_ObjectHideFlags: 0
@@ -319,7 +354,7 @@ Transform:
   m_GameObject: {fileID: 6843398988757712682}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.12, y: 0.03, z: 0}
+  m_LocalPosition: {x: 2.36, y: 0.03, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

@@ -7,6 +7,10 @@ public class EnemyPatrolAI : MonoBehaviour
 
     [SerializeField] float moveSpeed = 1f;
     public float damage = 1f;
+    public PlayerController playerController;
+    private PlayerHealth player;
+
+
 
     BoxCollider2D myBox;
     Rigidbody2D myRigid;
@@ -14,6 +18,9 @@ public class EnemyPatrolAI : MonoBehaviour
     void Start()
     {
         myRigid = GetComponent<Rigidbody2D>();
+        playerController = GameObject.FindObjectOfType<PlayerController>();
+        player = GameObject.FindObjectOfType<PlayerHealth>();
+
     }
 
     void Update()
@@ -37,5 +44,26 @@ public class EnemyPatrolAI : MonoBehaviour
     {
         transform.localScale = new Vector2(-(Mathf.Sign(myRigid.velocity.x)), transform.localScale.y);
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        //EnemyPatrolAI enemy = collision.GetComponent<EnemyPatrolAI>();
+        if (collision.gameObject.tag == "Player")
+        {
+            playerController.KBCounter = playerController.KBTotalTime;
+            if (collision.transform.position.x <= transform.position.x)
+            {
+                playerController.KnockFromRight = true;
+            }
+            if (collision.transform.position.x > transform.position.x)
+            {
+                playerController.KnockFromRight = false;
+            }
+
+            player.Damage(damage);
+        }
+    }
+
+
 
 }

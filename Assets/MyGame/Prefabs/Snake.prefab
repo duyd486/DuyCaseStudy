@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 6189530921154160319}
   m_Layer: 7
   m_Name: Snake
-  m_TagString: Enemy
+  m_TagString: BodyDamage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -163,7 +163,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.1, y: -0.22}
+  m_Offset: {x: 0.05997169, y: -0.24825533}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -174,7 +174,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.0473769, y: 0.16698445}
+  m_Size: {x: 0.025714636, y: 0.11047384}
   m_EdgeRadius: 0
 --- !u!95 &2000517201906093123
 Animator:
@@ -229,7 +229,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.023075342, y: -0.21955793}
+  m_Offset: {x: -0.044737756, y: -0.24592954}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -240,7 +240,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.30576468, y: 0.18047258}
+  m_Size: {x: 0.2605561, y: 0.12772936}
   m_EdgeRadius: 0
 --- !u!114 &6189530921154160319
 MonoBehaviour:
@@ -257,6 +257,8 @@ MonoBehaviour:
   animator: {fileID: 2000517201906093123}
   dieTime: 0.5
   maxHealth: 1
+  playerController: {fileID: 0}
+  dame: 1
 --- !u!1 &4291281606825658535
 GameObject:
   m_ObjectHideFlags: 0
@@ -268,7 +270,7 @@ GameObject:
   - component: {fileID: 3239674833923895875}
   m_Layer: 7
   m_Name: Snake
-  m_TagString: Enemy
+  m_TagString: BodyDamage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -282,7 +284,7 @@ Transform:
   m_GameObject: {fileID: 4291281606825658535}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.88, y: 1.98, z: 0}
+  m_LocalPosition: {x: 12.286824, y: -3.700275, z: 0.027447263}
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 1
   m_Children:

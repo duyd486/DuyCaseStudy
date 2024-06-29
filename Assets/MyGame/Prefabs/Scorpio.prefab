@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 970805315449563738}
   m_Layer: 7
   m_Name: Scorpio
-  m_TagString: Enemy
+  m_TagString: BodyDamage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -163,7 +163,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.13, y: -0.23660009}
+  m_Offset: {x: 0.09341487, y: -0.23660009}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -174,7 +174,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.0473769, y: 0.14018461}
+  m_Size: {x: 0.02493795, y: 0.14018461}
   m_EdgeRadius: 0
 --- !u!61 &6523130170708462356
 BoxCollider2D:
@@ -208,7 +208,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.031480834, y: -0.16122784}
+  m_Offset: {x: -0.049696594, y: -0.1668011}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -219,7 +219,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.39870933, y: 0.3105326}
+  m_Size: {x: 0.32782477, y: 0.29938608}
   m_EdgeRadius: 0
 --- !u!114 &5411246847103632988
 MonoBehaviour:
@@ -268,7 +268,7 @@ GameObject:
   - component: {fileID: 7064459402978740134}
   m_Layer: 7
   m_Name: Scorpio
-  m_TagString: Enemy
+  m_TagString: BodyDamage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

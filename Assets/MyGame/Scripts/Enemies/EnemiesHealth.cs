@@ -7,6 +7,7 @@ public class EnemiesHealth : MonoBehaviour, ItakeDame
     public Animator animator;
     public float dieTime = 1f;
     [SerializeField] private float maxHealth = 3f;
+    //public float dame;
 
     private float currentHealth;
 
@@ -22,7 +23,7 @@ public class EnemiesHealth : MonoBehaviour, ItakeDame
         animator.SetTrigger("IsHurt");
 
         currentHealth -= damage;
-        Debug.Log("Enemy hit");
+        //Debug.Log("Enemy hit");
 
         if (currentHealth <= 0)
         {
@@ -31,12 +32,14 @@ public class EnemiesHealth : MonoBehaviour, ItakeDame
         }
     }
 
+
+
+
     void Die()
     {
-        Debug.Log("Die");
+        //Debug.Log("Die");
         animator.SetBool("IsDead", true);
-        GetComponent<Collider2D>().enabled = false;
-        this.enabled = false;
+
     }
 
 }
