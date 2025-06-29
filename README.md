@@ -17,9 +17,8 @@
 
 ## 🎮 Gameplay
 
-- Điều khiển một Padoru chạy không ngừng nghỉ, tránh chướng ngại vật và thu thập thêm đồng đội.
-- Càng nhiều Padoru → càng mạnh → càng vui!
-- Gameplay đơn giản, nhưng đòi hỏi phản xạ và chiến thuật.
+- Di chuyển nhân vật đi tiêu diệt các con quái trong rừng, né tránh hoặc phản lại các chiêu từ xa
+- Đi qua các map, khám phá cốt truyện và tiêu diệt các boss lớn
 
 ---
 
